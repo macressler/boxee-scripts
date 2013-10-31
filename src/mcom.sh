@@ -87,8 +87,6 @@ if $log ; then
 	fi
 fi
 
-echo $finish >> ~/Desktop/test
-
 minicom -D /dev/tty.usbserial$@ $finish
 
 exit;
