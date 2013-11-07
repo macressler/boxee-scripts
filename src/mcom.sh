@@ -36,6 +36,9 @@ do
 		-l | --log)
 			log=true
 		  	;;
+		-u | --unlock)
+			rm /tmp/LCK* >/dev/null 2>&1 
+			;;
 		-a | --available)
 			ls -l /dev/tty.usbserial*
 			exit
@@ -43,9 +46,6 @@ do
 		-o | --log_file)
 		  	default_log=$2
 		  	;;
-		-u | --unlock)
-			rm /tmp/LCK* >/dev/null 2>&1 
-			;;
 		-h | --help)
 			usage
 			exit
